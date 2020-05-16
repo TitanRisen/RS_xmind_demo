@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>发布xmind文件测试</title>
+</head>
+<body>
+    <h1> 发布xmind文件测试 </h1>
+    <form action="/create_xmind" method="post">
+    
+        <br>姓名： <input type="text" name="name"> </br>
+        <br>电话： <input type="text" name="number"> </br>
+        <br>地址： <input type="text" name="address"> </br>
+        <br>办理流程： <input type="text" name="flow"> </br>
+        <input type="submit" value="提交">
+        {% csrf_token %}
+    </form>
+    <p style="color:red">{{ rlt }}</p>
+</body>
+</html>

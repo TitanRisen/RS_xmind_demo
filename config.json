@@ -1,0 +1,9 @@
+{
+    "form_items":[
+        {"name":"电话","id":"number","type":"text"},
+        {"name":"流程","id":"flow","type":"text"},
+        {"name":"邮箱","id":"email", "type":"text"},
+        {"name":"详细地址","id":"adress", "type":"text"}
+        
+    ]
+}
