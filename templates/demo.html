@@ -1,0 +1,457 @@
+<!Doctype html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .mainblock {
+            
+min-width: 1210px; 
+            width: 1210px;
+            margin: 0 auto;
+        }
+        .mainblock1{
+            
+min-width: 1210px;
+            margin: 0 auto;
+            margin-top: -180px;
+            width: 1210px;
+            z-index: 0;
+        }
+
+        .maintitle {
+            position: relative;
+            top: -120px;
+            left: 300px;
+            font-size: 46px;
+            color: #0374B7;
+            width: 800px;
+
+        }
+
+        .subtitle {
+            font-size: 48px;
+            color: #0374B7;
+            position: relative;
+            top: 40px;
+            left: 450px;
+            letter-spacing: 20px;
+            
+            width: 800px;
+        }
+
+        .center {
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .logo {
+            margin-top: 28px;
+        }
+
+        .bgl {
+
+            float: right;
+        }
+
+        .mainblock-flex {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+        }
+
+        .mainblock-flex:nth-of-type(2) {
+            height: 270px;
+            margin-top: 60px;
+        }
+
+        .mainblock-flex:nth-of-type(3) {
+            height: 360px;
+            margin-top: 30px;
+        }
+
+
+        .mainblock-flex:nth-of-type(4) {
+            height: 180px;
+            margin-top: 30px;
+        }
+
+        .mainblock-flex:nth-of-type(5) {
+            height: 350px;
+            margin-top: 30px;
+            margin-bottom: 180px;
+        }
+
+        .left {
+            justify-content:center;
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            flex: 11;
+        }
+
+        #p1{
+            height: 270px;
+        }
+        #p2{
+            height: 360px;
+        }
+        #p3{
+            height: 180px;
+        }
+        #p4{
+            height: 350px;
+        }
+        .mid {
+            
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            flex-direction:column;
+            justify-content:space-around;
+            flex: 32;
+        }
+        .mid-item1{
+            font-size: 18px;
+            line-height: 50px;
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 360px;
+            text-indent: 2rem;
+        }
+        .right-item1{
+            
+            font-size: 18px;
+            line-height: 50px;
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 650px;
+            text-indent: 2rem;
+        }
+
+        .mid-item2:nth-child(1){
+            
+            text-indent: 2rem;
+            font-size: 20px;
+            line-height:110px;
+            width: 360px;
+        }
+        
+        .mid-item2:nth-child(2){
+            font-size: 20px;
+            text-indent: 2rem;
+            line-height:140px;
+            width: 360px;
+        }
+        
+        .mid-item2:nth-child(3){
+            font-size: 20px;
+            text-indent: 2rem;
+            line-height:65px;
+            width: 360px;
+        }
+        .mid-item2,.right-item2{
+            border: #AAAAAA solid 2px;
+            border-left-width:8px;
+        }
+
+        .right-item2{
+            width: 650px;
+
+        }
+        .right-item2:nth-child(1){
+            padding: 0 2rem;
+            width: 585px;
+            line-height: 33px;
+            font-size: 20px;
+            height: 110px;
+
+        }
+        
+        .right-item2:nth-child(2){
+            height: 140px;
+            line-height: 32px;
+            font-size: 20px;
+        }
+        
+        .right-item2:nth-child(3){
+            text-indent: 2rem;
+            height: 65px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .right {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            flex-direction:column;
+            justify-content:space-around;
+            flex: 57;
+        }
+        .mid-3-item1{
+            font-weight: 900;
+            color: #038DCB;
+            font-size: 20px;
+            line-height: 40px;
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 360px;
+            text-indent: 2rem;
+        }
+        .mid-3-item2{
+            
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 360px;
+        }
+        .mid-4-item1{
+            font-weight: 900;
+            color: #038DCB;
+            font-size: 20px;
+            line-height: 40px;
+            border: #AAAAAA solid 2px;
+            border-left-width:8px;
+            width: 360px;
+            text-indent: 2rem;
+        }
+        .mid-4-item2{
+            
+            border: #AAAAAA solid 2px;
+            border-left-width:8px;
+            width: 360px;
+        }
+        .right-item3-1{
+            font-weight: 900;
+            color: #038DCB;
+            font-size: 20px;
+            line-height: 40px;
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 650px;
+            text-indent: 2rem;
+        }
+        .right-item3-2{
+            border: #038DCB solid 2px;
+            border-left-width:8px;
+            width: 650px;
+            height: 115px;
+        }
+        .right-item4-1{
+            font-weight: 900;
+            color: #038DCB;
+            font-size: 20px;
+            line-height: 40px;
+            border: #AAAAAA solid 2px;
+            border-left-width:8px;
+            width: 650px;
+            text-indent: 2rem;
+        }
+        .right-item4-2{
+            padding-top: 16px;
+            border: #AAAAAA solid 2px;
+            border-left-width:8px;
+            width: 650px;
+            height: 254px;
+            font-size: 16px;
+            line-height: 32px;
+        }
+        .right-item3-2 p{
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .textarea_style{
+            width: 300px; 
+            height: 100px;
+        }
+
+        .submit-button { /* 按钮美化 */
+	        width: 270px; /* 宽度 */
+	        height: 40px; /* 高度 */
+            left:50%;
+            margin-left: 450px;
+	        border-width: 0px; /* 边框宽度 */
+	        border-radius: 3px; /* 边框半径 */
+	        background: #1E90FF; /* 背景颜色 */
+	        cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	        outline: none; /* 不显示轮廓线 */
+	        font-family: Microsoft YaHei; /* 设置字体 */
+	        color: white; /* 字体颜色 */
+	        font-size: 17px; /* 字体大小 */
+        }
+        .submit-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	        background: #5599FF;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    //图片大小验证  
+
+function setImagePreview() {  
+        var docObj=document.getElementById("doc");  
+        var imgObjPreview=document.getElementById("preview_platform_code");  
+                if(docObj.files &&    docObj.files[0]){ 
+                        //火狐下，直接设img属性  
+                        if( docObj.files[0].size>1008960){
+                            alert("上传的图片请少于 1MB!,请重新上传");
+                            return false;
+                        }
+                        imgObjPreview.style.display = 'block';  
+                        imgObjPreview.style.width = '300px';  
+                        imgObjPreview.style.height = '120px';                      
+                        //imgObjPreview.src = docObj.files[0].getAsDataURL();  
+                        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式    
+                        imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);  
+                        console.log("火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式    ");
+  
+  
+                }else{  
+                        //IE下，使用滤镜  
+                        console.log("IE下，使用滤镜 ");
+                        docObj.select();  
+                        var imgSrc = document.selection.createRange().text;  
+                        var localImagId = document.getElementById("localImag");  
+                        //必须设置初始大小  
+                        localImagId.style.width = "300px";  
+                        localImagId.style.height = "120px";  
+                        //图片异常的捕捉，防止用户修改后缀来伪造图片  
+                        try{  
+                                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";  
+                                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;  
+                        }catch(e){  
+                                alert("您上传的图片格式不正确，请重新选择!");  
+                                return false;  
+                        }  
+                        imgObjPreview.style.display = 'none';  
+                        document.selection.empty();  
+                }  
+                return true;  
+        }  
+        // 用来alert 是否成功
+        {% if succeed == True %}
+            {{script}}('{{message}}')
+        {% endif %}
+</script>
+</head>
+
+<body>
+    {% load static %}
+    <form action="/create_xmind" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mainblock">
+        <img class="logo" src="{%static './img/logo.png' %}">
+        <img class="bgl" src="{%static './img/bgl.png' %}">
+        
+        <h1 class="subtitle">办事指南</h1>
+        <h1 class="maintitle">劳动能力复查鉴定申请（单位）</h1>
+    </div>
+
+    <div class="mainblock mainblock-flex">
+        <div class="left"><img id='p1' src="{%static './img/p1.jpg'%}"></div>
+        <div class="mid">
+            <div class="mid-item1">事项名称
+            </div>
+            <div class="mid-item1">事项代码
+            </div>
+            <div class="mid-item1">事项内容（待遇标准）
+            </div>
+            <div class="mid-item1">政策依据（文件名，文号）
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="right-item1">
+                <input type="text" name="item_name">  
+            </div>
+            <div class="right-item1">
+                <textarea cols="80" rows="2"  name="item_code">  </textarea>
+            </div>
+            <div class="right-item1">
+                <textarea cols="80" rows="2"  name="item_content"> </textarea>
+            </div>
+            <div class="right-item1">
+                <textarea cols="80" rows="2"  name="policy_basis"> </textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mainblock mainblock-flex">
+        <div class="left"><img id='p2' src="{%static './img/p2.jpg'%}"></div>
+        <div class="mid">
+            <div class="mid-item2">申办所需资格条件
+            </div>
+            <div class="mid-item2">申办材料
+            </div>
+            
+            <div class="mid-item2">审核时限
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-item2">
+                <textarea cols="80" rows="2"  name="qualificatio"> </textarea>
+            </div>
+            <div class="right-item2">
+               <textarea cols="80" rows="6"  name="materials"> </textarea>
+            </div>
+            <div class="right-item2">
+               <textarea cols="80" rows="2"  name="time_limit"> </textarea>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="mainblock mainblock-flex">
+        <div class="left"><img id='p3' src="{%static './img/p3.jpg'%}"></div>
+        <div class="mid"><div class="mid-3-item1">网络咨询平台(请选择二维码上传)</div>
+    <div class="mid-3-item2">
+        <input  type="file" name="platform_code" accept="image/jpg,image/jpeg,image/png,image/PNG" id="doc" onchange="javascript:setImagePreview();">
+        <div id="localImag"><img id="preview_platform_code" width=-1 height=-1 style="diplay:none" /></div>  
+    </div> 
+    </div>
+        <div class="right">
+            <div class="right-item3-1"> 咨询电话</div>
+                
+            <div class="right-item3-2"  style="font-size: 20px; ">
+                <textarea cols="80" rows="6"  name="phone_number"> </textarea>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <div class="mainblock mainblock-flex">
+        <div class="left"><img id='p4' src="{%static './img/p4.jpg'%}"></div>
+        <div class="mid">
+            <div class="mid-4-item1">业务办理代码</div>
+            <div class="mid-4-item2">
+                <img  style="height: 270px; padding-left: 20px;" src="{%static './img/二维码2.jpg'%}"/>
+            </div> 
+
+        </div>
+        <div class="right">
+            <div class="right-item4-1">办事大厅地址</div>
+                
+            <div class="right-item4-2">
+                <ol>
+                    <textarea cols="80" rows="8"  name="adress"> </textarea>
+                </ol>
+            </div>
+        </div>
+        
+    </div>
+    <div class="mainblock1">
+    <button type="submit" class="submit-button"> 确认上传 </button>
+    </form>
+
+    <img src="{%static './img/bottom.jpg'%}">
+    </div>
+
+
+
+</body>
+
+</html>

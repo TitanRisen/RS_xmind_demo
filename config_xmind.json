@@ -1,0 +1,15 @@
+{
+    "form_items":[
+        {"name":"事项名称","id":"item_name","type":"text"},
+        {"name":"事项代码","id":"item_code","type":"text"},
+        {"name":"事项内容（待遇标准）","id":"item_content", "type":"text"},
+        {"name":"政策依据（文件名，文号）","id":"policy_basis", "type":"text"},
+        {"name":"申办所需资格条件","id":"qualificatio","type":"text"},
+        {"name":"申办材料","id":"materials","type":"text"},
+        {"name":"审核时限","id":"time_limit", "type":"text"},
+        {"name":"网络咨询平台","id":"platform_code", "type":"photo"},
+        {"name":"咨询电话","id":"phone_number", "type":"text"},
+        {"name":"业务办理代码 ","id":"business_code", "type":"photo"},
+        {"name":"办事大厅地址","id":"adress", "type":"text"}
+    ]
+}

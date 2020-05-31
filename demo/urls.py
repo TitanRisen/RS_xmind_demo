@@ -22,5 +22,5 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^$', view.hello),
     # url(r'^xmind$', xmind_form.search_form),
-    url(r'^create_xmind$', xmind_form.create_xmind),
+    url(r'^create_xmind$', xmind_form.create_xmind , name='create_xmind'),
 ]
