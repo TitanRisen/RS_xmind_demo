@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+    <el-steps :active="active" finish-status="success">
+        <el-step title="事项"></el-step>
+        <el-step title="申办资格审核"></el-step>
+        <el-step title="业务咨询和业务办理"></el-step>
+    </el-steps>
+    <el-form ref="form" :model="form" label-width="80px">
+		<!--0-->
+        <div class="info" v-if="active==1">
+            <el-form-item label="事项名称">
+    <el-input v-model="form.name"></el-input>
+  </el-form-item>
+	 <el-form-item label="事项代码">
+    <el-input v-model="form.code"></el-input>
+  </el-form-item>
+		<el-form-item label="事项内容（待遇标准）">
+			<el-input type="textarea" v-model="form.content"></el-input>
+ </el-form-item>
+        </div>
+		
+		<!--1-->
+		<div class="info" v-if="active==2">
+		<div><h4>政策依据（文件名、文号）</h4><br /></div>
+			<el-form-item label="文件名">
+    <el-input type="textarea" v-model="form.fileName"></el-input></el-form-item>
+			<el-form-item label="文号">
+    <el-input v-model="form.number"></el-input>
+  </el-form-item>
+			<el-form-item label="申办所需资格条件">
+    <el-input type="textarea" v-model="form.condition"></el-input></el-form-item>
+				<el-form-item label="申办材料">
+					<el-upload
+  class="upload-demo"
+  drag
+  action="https://jsonplaceholder.typicode.com/posts/"
+  multiple>
+  <i class="el-icon-upload"></i>
+  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+</el-upload>
+			</el-form-item>
+		</div>
+		
+		<!--2-->
+		<div class="info" v-if="active==3">
+			 <el-form-item label="审核时限">
+    <el-input type="textarea" v-model="form.time"></el-input></el-form-item>
+			 <el-form-item label="网络咨询平台">
+				 <el-upload
+  class="upload-demo"
+  drag
+  action="https://jsonplaceholder.typicode.com/posts/"
+  multiple>
+  <i class="el-icon-upload"></i>
+  <div class="el-upload__text">将图片拖到此处，或<em>点击上传</em></div>
+					 <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+</el-upload>
+				 </el-form-item>
+					 <el-form-item label="咨询电话">
+    <el-input v-model="form.phoneNumber"></el-input>
+  </el-form-item>
+					 <el-form-item label="业务办理二维码">
+						 <el-upload
+  class="upload-demo"
+  drag
+  action="https://jsonplaceholder.typicode.com/posts/"
+  multiple>
+  <i class="el-icon-upload"></i>
+  <div class="el-upload__text">将图片拖到此处，或<em>点击上传</em></div>
+  <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+</el-upload>
+						  </el-form-item>
+					 <el-form-item label="办事大厅地址">
+    <el-input type="textarea" v-model="form.address"></el-input></el-form-item>
+			<div><br/>
+					 <el-button type="primary" @click="onSubmit">保存提交</el-button></div>
+	</div>
+		
+		 <el-button style="margin-top: 12px;" @click="pre" v-if="active>1">返回上一步</el-button>
+                <el-button style="margin-top: 12px;" @click="next" v-if="active<3">保存并继续设置</el-button>
+    </el-form>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                visible: false,
+                active: 1,
+                form: {
+                   name: '',
+          code: '',
+          content: '',
+          fileName: '',
+          number: '',
+          condition: '',
+           time: '',
+          phoneNumber: '',
+			address:''
+                }
+            }
+        },
+        methods: {
+            next() {
+                if (this.active++ > 3) this.active = 1;
+            }, pre() {
+                if (this.active-- < 3) this.active = 1;
+            }
+        }
+    })
+</script>
+</html>

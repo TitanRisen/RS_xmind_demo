@@ -265,9 +265,9 @@ min-width: 1210px;
             height: 100px;
         }
 
-        .submit-button { /* 按钮美化 */
-	        width: 270px; /* 宽度 */
-	        height: 40px; /* 高度 */
+        .submit-button { 
+	        width: 270px; 
+	        height: 40px; 
             left:50%;
             margin-left: 450px;
 	        border-width: 0px; /* 边框宽度 */
@@ -338,7 +338,7 @@ function setImagePreview() {
 <body>
     {% load static %}
     <form action="/create_xmind" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
+    {% comment %} {% csrf_token %} {% endcomment %}
     <div class="mainblock">
         <img class="logo" src="{%static './img/logo.png' %}">
         <img class="bgl" src="{%static './img/bgl.png' %}">
